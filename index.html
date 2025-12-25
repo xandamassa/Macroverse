@@ -38,6 +38,16 @@
       height: 250px;
       object-fit: cover;
       border-radius: 12px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+
+    .gallery img:hover {
+      transform: scale(1.12) translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+      z-index: 1;
+}
+
+
     }
   </style>
 </head>
