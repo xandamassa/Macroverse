@@ -12,11 +12,14 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   background: linear-gradient(
     135deg,
-    #0b0b0f 0%,
-    #1a0f2e 40%,
-    #2b124c 70%,
-    #0b0b0f 100%
+    #0b0b0f,
+    #1a0f2e,
+    #2b124c,
+    #1a0f2e,
+    #0b0b0f
   );
+  background-size: 400% 400%;
+  animation: backgroundBreath 30s ease-in-out infinite;
   color: #ffffff;
   min-height: 100vh;
 }
@@ -56,7 +59,18 @@ body {
 }
 
 
-    }
+    @keyframes backgroundBreath {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
   </style>
 </head>
 
