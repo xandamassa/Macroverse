@@ -132,7 +132,28 @@ header p {
   animation: shine 2.5s infinite;
   text-shadow: 1px 1px 6px rgba(80, 0, 120, 0.5);
 }
+    
+/* Botão dentro do header */
+header button {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 1rem;
+  padding: 8px 20px;
+  border: 2px solid #d1c1ff;
+  border-radius: 12px;
+  background: transparent;
+  color: #d1c1ff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-left: 0;      /* garante alinhamento à esquerda */
+  margin-top: 10px;    /* dá um espaçamento do subtítulo */
+  display: inline-block;
+}
 
+header button:hover {
+  background: rgba(209, 193, 255, 0.2);
+  box-shadow: 0 0 10px rgba(209, 193, 255, 0.7);
+}
+    
 /* Animação de brilho tipo lâmina */
 @keyframes shine {
   0% { background-position: -200% 0; }
@@ -212,6 +233,7 @@ header p {
   <header>
     <h1>Macroverse</h1>
     <p>Galeria de Cartas</p>
+    <button id="openModal">O que é o Macroverse?</button>
   </header>
 
   <main>
