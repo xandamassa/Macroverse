@@ -75,7 +75,6 @@
 
   <main>
     <section class="gallery">
-      <!-- Substitua as imagens abaixo pelas suas -->
       <img src="https://picsum.photos/600/400?random=1" alt="Imagem 1" />
       <img src="https://picsum.photos/600/400?random=2" alt="Imagem 2" />
       <img src="https://picsum.photos/600/400?random=3" alt="Imagem 3" />
