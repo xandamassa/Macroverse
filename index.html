@@ -6,59 +6,10 @@
   <title>Macroverse</title>
   <link rel="icon" type="image/png" href="favicon.png">
   
+  <!-- Fonte fantasiosa -->
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap" rel="stylesheet">
 
-
   <style>
-
-/* Modal geral */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 10;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  justify-content: center;
-  align-items: flex-start;
-  padding-top: 100px;
-  backdrop-filter: blur(5px);
-  background-color: rgba(0,0,0,0.5);
-}
-
-/* Conteúdo do modal */
-.modal-content {
-  background: #1f1f2e;
-  color: #ffffff;
-  padding: 30px;
-  border-radius: 15px;
-  max-width: 600px;
-  margin: auto;
-  font-family: 'Cinzel Decorative', serif;
-  line-height: 1.5;
-  text-align: center;
-  box-shadow: 0 0 25px rgba(80, 0, 200, 0.5);
-  animation: slideDown 0.4s ease;
-}
-
-/* Botão de fechar */
-.close {
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  color: #ffffff;
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-/* Animação do modal */
-@keyframes slideDown {
-  from { transform: translateY(-50px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
-}
-    
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
@@ -79,136 +30,158 @@
       min-height: 100vh;
     }
 
-/* Header básico */
-header {
-  padding: 40px 20px;
-  text-align: center;
-  border-bottom: 1px solid #1f1f2e;
-}
+    /* Header */
+    header {
+      padding: 40px 20px;
+      text-align: center;
+      border-bottom: 1px solid #1f1f2e;
+      position: relative;
+    }
 
-/* Efeito de lâmina no título */
-header h1 {
-  font-family: 'Cinzel Decorative', serif;
-  font-size: 3rem;
-  letter-spacing: 2px;
-  margin-bottom: 20px; /* aumenta o espaço entre título e subtítulo */
-  display: inline-block;
-  background: linear-gradient(120deg, #f0e5ff 30%, #ffffff 50%, #f0e5ff 70%);
-  background-size: 200% 100%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: shine 2.5s infinite;
-  text-shadow: 2px 2px 8px rgba(80, 0, 120, 0.7);
-}
+    /* Efeito de lâmina no título */
+    header h1 {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 3rem;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+      display: inline-block;
+      background: linear-gradient(120deg, #f0e5ff 30%, #ffffff 50%, #f0e5ff 70%);
+      background-size: 200% 100%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shine 2.5s infinite;
+      text-shadow: 2px 2px 8px rgba(80, 0, 120, 0.7);
+    }
 
+    header p {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 1.5rem;
+      letter-spacing: 1px;
+      margin-top: 0;
+      display: block;
+      background: linear-gradient(120deg, #d1c1ff 30%, #ffffff 50%, #d1c1ff 70%);
+      background-size: 200% 100%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shine 2.5s infinite;
+      text-shadow: 1px 1px 6px rgba(80, 0, 120, 0.5);
+    }
 
-header p {
-  font-family: 'Cinzel Decorative', serif;
-  font-size: 1.5rem;
-  letter-spacing: 1px;
-  margin-top: 0;
-  display: block;
-  background: linear-gradient(120deg, #d1c1ff 30%, #ffffff 50%, #d1c1ff 70%);
-  background-size: 200% 100%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: shine 2.5s infinite;
-  text-shadow: 1px 1px 6px rgba(80, 0, 120, 0.5);
-}
-    
-header button {
-  font-family: 'Cinzel Decorative', serif;
-  font-size: 1rem;
-  padding: 8px 20px;
-  border: 2px solid #d1c1ff;
-  border-radius: 12px;
-  background: transparent;
-  color: #d1c1ff;
-  cursor: pointer;
-  transition: all 0.3s ease;
+    /* Botão do header */
+    header button {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 1rem;
+      padding: 8px 20px;
+      border: 2px solid #d1c1ff;
+      border-radius: 12px;
+      background: transparent;
+      color: #d1c1ff;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: inline-block;
+      margin-top: 10px;
+      margin-left: 0; /* alinha à esquerda */
+    }
 
-  
-  display: inline-block;
-  margin-top: 10px;
-  margin-left: 0;
-}
+    header button:hover {
+      background: rgba(209, 193, 255, 0.2);
+      box-shadow: 0 0 10px rgba(209, 193, 255, 0.7);
+    }
 
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 10;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      align-items: flex-start;
+      padding-top: 100px;
+      backdrop-filter: blur(5px);
+      background-color: rgba(0,0,0,0.5);
+    }
 
-header button:hover {
-  background: rgba(209, 193, 255, 0.2);
-  box-shadow: 0 0 10px rgba(209, 193, 255, 0.7);
-}
-    
-/* Animação de brilho tipo lâmina */
-@keyframes shine {
-  0% { background-position: -200% 0; }
-  50% { background-position: 200% 0; }
-  100% { background-position: 200% 0; }
-}
+    .modal-content {
+      background: #1f1f2e;
+      color: #ffffff;
+      padding: 30px;
+      border-radius: 15px;
+      max-width: 600px;
+      margin: auto;
+      font-family: 'Cinzel Decorative', serif;
+      line-height: 1.5;
+      text-align: center;
+      box-shadow: 0 0 25px rgba(80, 0, 200, 0.5);
+      animation: slideDown 0.4s ease;
+      position: relative;
+    }
 
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      color: #ffffff;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    /* Galeria */
     main {
       padding: 40px 20px;
       max-width: 1200px;
       margin: auto;
     }
 
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 20px;
-}
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+    }
 
-/* Transições gerais das imagens */
-.gallery img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 12px;
-  background: transparent;
-  transition:
-    transform 0.45s ease,
-    box-shadow 0.45s ease,
-    filter 0.45s ease,
-    opacity 0.45s ease;
-  cursor: pointer;
-}
+    .gallery img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 12px;
+      background: transparent;
+      transition: transform 0.45s ease, box-shadow 0.45s ease, filter 0.45s ease, opacity 0.45s ease;
+      cursor: pointer;
+    }
 
-/* Escurece as imagens que NÃO estão sendo hover */
-.gallery img {
-  transition:
-    transform 0.45s ease,
-    box-shadow 0.45s ease,
-    filter 0.45s ease,
-    opacity 0.45s ease;
-}
+    .gallery img:hover {
+      filter: brightness(1);
+      opacity: 1;
+      transform: scale(1.25);
+      box-shadow: 0 25px 60px rgba(0,0,0,0.7);
+      z-index: 2;
+    }
 
-/* Destaca a imagem em hover */
-.gallery img:hover {
-  filter: brightness(1);
-  opacity: 1;
-  transform: scale(1.25);
-  box-shadow: 0 25px 60px rgba(0,0,0,0.7);
-  z-index: 2;
-}
+    .gallery:hover img:not(:hover) {
+      filter: brightness(0.55);
+      opacity: 0.7;
+    }
 
-/* Escurece apenas as imagens que NÃO estão sendo hover */
-.gallery:hover img:not(:hover) {
-  filter: brightness(0.55);
-  opacity: 0.7;
-}
+    /* Animações */
+    @keyframes shine {
+      0% { background-position: -200% 0; }
+      50% { background-position: 200% 0; }
+      100% { background-position: 200% 0; }
+    }
 
+    @keyframes slideDown {
+      from { transform: translateY(-50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
 
     @keyframes backgroundBreath {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
 
   </style>
 </head>
@@ -222,18 +195,17 @@ header button:hover {
   </header>
 
   <main>
-
-<!-- Modal escondido inicialmente -->
-<div id="macroverseModal" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <p>
-      O Macroverse é o index de cards feitos pelo nosso time, como se fosse uma grande Wikipédia. 
-      Todas essas cartas que está vendo uma vez foram por server, e agora ela está aqui a sua disposição! 
-      Fique à vontade para ler efeitos e analisar os estruturais!
-    </p>
-  </div>
-</div>
+    <!-- Modal -->
+    <div id="macroverseModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>
+          O Macroverse é o index de cards feitos pelo nosso time, como se fosse uma grande Wikipédia. 
+          Todas essas cartas que está vendo uma vez foram por server, e agora ela está aqui a sua disposição! 
+          Fique à vontade para ler efeitos e analisar os estruturais!
+        </p>
+      </div>
+    </div>
 
     <section class="gallery">
       <img src="images/bulbo_de_rosa.png" alt="">
@@ -245,21 +217,21 @@ header button:hover {
   </main>
 
   <script>
-  const modal = document.getElementById("macroverseModal");
-  const btn = document.getElementById("openModal");
-  const close = document.querySelector(".modal .close");
+    const modal = document.getElementById("macroverseModal");
+    const btn = document.getElementById("openModal");
+    const close = document.querySelector(".modal .close");
 
-  // Abre o modal
-  btn.onclick = () => modal.style.display = "flex";
+    // Abre o modal
+    btn.onclick = () => modal.style.display = "flex";
 
-  // Fecha quando clica no X
-  close.onclick = () => modal.style.display = "none";
+    // Fecha quando clica no X
+    close.onclick = () => modal.style.display = "none";
 
-  // Fecha quando clica fora do conteúdo
-  window.onclick = (event) => {
-    if(event.target === modal) modal.style.display = "none";
-  }
-</script>
-  
+    // Fecha quando clica fora do conteúdo
+    window.onclick = (event) => {
+      if(event.target === modal) modal.style.display = "none";
+    }
+  </script>
+
 </body>
 </html>
