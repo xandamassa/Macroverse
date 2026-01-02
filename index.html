@@ -158,13 +158,11 @@
   cursor: pointer;
 }
 
-    .gallery img:hover {
-      filter: brightness(1);
-      opacity: 1;
-      transform: scale(1.25);
-      box-shadow: 0 25px 60px rgba(0,0,0,0.7);
-      z-index: 2;
-    }
+.gallery img:hover {
+  transform: scale(1.25);
+  box-shadow: 0 30px 70px rgba(0,0,0,0.75);
+  z-index: 5;
+}
 
     .gallery:hover img:not(:hover) {
       filter: brightness(0.55);
