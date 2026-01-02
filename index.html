@@ -210,7 +210,7 @@ summary::marker {
   display: none;
 }
 
-    /* ===== PASTAS ===== */
+/* ===== PASTAS ===== */
 
 details.category {
   margin-bottom: 30px;
@@ -218,10 +218,10 @@ details.category {
 
 summary {
   cursor: pointer;
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   padding: 12px 16px;
   border-radius: 10px;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255,255,255,0.05);
   transition: background 0.3s ease;
   user-select: none;
 }
@@ -237,6 +237,27 @@ summary:hover {
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 20px;
   margin-top: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 14px;
+  transition: transform 0.45s cubic-bezier(.2,.8,.2,1),
+              box-shadow 0.45s ease,
+              filter 0.45s ease;
+  cursor: pointer;
+}
+
+.gallery img:hover {
+  transform: scale(1.28);
+  box-shadow: 0 30px 70px rgba(0,0,0,0.75);
+  z-index: 5;
+}
+
+.gallery:hover img:not(:hover) {
+  filter: brightness(0.55);
 }
 
 /* CONTÊINER DA IMAGEM */
@@ -272,21 +293,21 @@ summary:hover {
     <button id="openModal">O que é o Macroverse?</button>
   </header>
 
-  <main>
-    <!-- Modal -->
-    <div id="macroverseModal" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <p>
-          O Macroverse é o index de cards feitos pelo nosso time, como se fosse uma grande Wikipédia. 
-          Todas essas cartas que está vendo, uma vez foram para o server, e agora elas estão aqui a sua disposição! 
-          Fique à vontade para ler efeitos e analisar os estruturais!
-        </p>
-      </div>
-    </div>
-
 <main>
 
+  <!-- Modal -->
+  <div id="macroverseModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>
+        O Macroverse é o index de cards feitos pelo nosso time, como se fosse uma grande Wikipédia. 
+        Todas essas cartas que está vendo, uma vez foram para o server, e agora elas estão aqui a sua disposição! 
+        Fique à vontade para ler efeitos e analisar os estruturais!
+      </p>
+    </div>
+  </div>
+
+  <!-- CATEGORIA -->
   <details class="category" open>
     <summary>🗂️ Cartas</summary>
 
@@ -296,6 +317,12 @@ summary:hover {
       <img src="images/ekasm_o_vento_aureo.png" alt="">
       <img src="images/jardineiro_corrompido.png" alt="">
       <img src="images/lirio_azul_da_solidao.png" alt="">
+      <img src="images/devooradora_de_homens.png" alt="">
+      <img src="images/devoradora_de_cervos.png" alt="">
+      <img src="images/mae_das_rosas.png" alt="">
+      <img src="images/predador_da_natura.png" alt="">
+      <img src="images/recrutamento_da_natureza.png" alt="">
+      <img src="images/sussurrante_ardiloso.png" alt="">
     </div>
 
   </details>
