@@ -142,15 +142,21 @@
       gap: 20px;
     }
 
-    .gallery img {
-      width: 100%;
-      height: auto;
-      display: block;
-      border-radius: 12px;
-      background: transparent;
-      transition: transform 0.45s ease, box-shadow 0.45s ease, filter 0.45s ease, opacity 0.45s ease;
-      cursor: pointer;
-    }
+.gallery img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 14px;
+
+  transition:
+    transform 0.45s cubic-bezier(.2,.8,.2,1),
+    box-shadow 0.45s ease,
+    filter 0.45s ease;
+
+  cursor: pointer;
+}
 
     .gallery img:hover {
       filter: brightness(1);
