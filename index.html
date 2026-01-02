@@ -273,6 +273,27 @@ summary::marker {
   z-index: 3;
 }
     
+    /* ===== ANIMAÇÃO SUAVE DE ABERTURA ===== */
+
+/* esconde conteúdo fechado */
+details > *:not(summary) {
+  overflow: hidden;
+}
+
+/* estado fechado */
+details:not([open]) > *:not(summary) {
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+/* estado aberto */
+details[open] > *:not(summary) {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+    
   </style>
 </head>
 
